@@ -242,7 +242,7 @@ class GoogleDriveFile(ApiAttributeMixin, ApiResource):
           fileId=file_id,
           fields=fields,
           # Teamdrive support
-          supportsTeamDrives=True
+          supportsAllDrives=True
         ).execute(http=self.http)
       except errors.HttpError as error:
         raise ApiRequestError(error)
